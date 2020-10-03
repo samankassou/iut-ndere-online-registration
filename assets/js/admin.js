@@ -197,27 +197,6 @@ $(function () {
     $(this).removeClass('is-invalid').next().hide().prev().prev().removeClass('text-danger');
   });
 
-  /*$('.edit_admin_btn').click(function(){
-     $('#admin_modal .modal-title').text('Modifier un administrateur');
-     $('.add_admin_submit_btn').removeClass('add_admin_submit_btn').addClass('update_admin_submit_btn');
-     $('#psw_zone').empty().before('<div class="form-group"><input type="checkbox" id="psw_checkbox"> Modifier le mot de passe</div>');
-     //$('#psw_zone').empty();
-     var id = $(this).closest('tr').attr('id');
-     $.ajax({
-      url: base_url + 'admin/ajax_get_admin',
-      type: 'post',
-      data: {id: id},
-      dataType: 'json',
-      success: function(data){
-        $('#admin_modal [name="name"]').val(data.nom_admin);
-        $('#admin_modal [name="email"]').val(data.email_admin);
-      },
-      error: function(){
-        alert('erreur ajax');
-      }
-     });
-  });
-  */
   $('.delete_admin_btn').click(function(){
     var id = $(this).closest('tr').attr('id');
 
